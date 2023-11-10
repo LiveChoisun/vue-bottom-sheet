@@ -111,6 +111,7 @@ const bottomSheetDraggableArea = ref<HTMLElement | null>(null)
  */
 const isFocused = (element: HTMLElement) => document.activeElement === element
 window.addEventListener('keyup', (event: KeyboardEvent) => {
+  if(!bottomSheet.value) return
   const isSheetElementFocused =
     bottomSheet.value!.contains(event.target as HTMLElement) &&
     isFocused(event.target as HTMLElement)
