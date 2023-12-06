@@ -1,6 +1,6 @@
-import { defineComponent as M, useCssVars as O, ref as a, computed as m, nextTick as x, openBlock as N, createBlock as R, Teleport as z, createElementVNode as r, createVNode as W, Transition as P, withCtx as j, withDirectives as q, vShow as G, normalizeClass as J, renderSlot as b, pushScopeId as K, popScopeId as Q } from "vue";
+import { defineComponent as M, useCssVars as O, ref as a, computed as h, nextTick as x, openBlock as N, createBlock as R, Teleport as z, createElementVNode as r, createVNode as W, Transition as P, withCtx as j, withDirectives as q, vShow as G, normalizeClass as J, renderSlot as b, pushScopeId as K, popScopeId as Q } from "vue";
 import s from "hammerjs";
-const U = (n) => (K("data-v-d1bf6e19"), n = n(), Q(), n), X = ["aria-hidden"], Z = /* @__PURE__ */ U(() => /* @__PURE__ */ r("div", { class: "bottom-sheet__draggable-thumb" }, null, -1)), ee = [
+const U = (n) => (K("data-v-0a0eb29a"), n = n(), Q(), n), X = ["aria-hidden"], Z = /* @__PURE__ */ U(() => /* @__PURE__ */ r("div", { class: "bottom-sheet__draggable-thumb" }, null, -1)), ee = [
   Z
 ], te = /* @__PURE__ */ M({
   __name: "VueBottomSheet",
@@ -17,35 +17,35 @@ const U = (n) => (K("data-v-d1bf6e19"), n = n(), Q(), n), X = ["aria-hidden"], Z
   setup(n, { expose: p, emit: i }) {
     const t = n;
     O((e) => ({
-      "1d914d98": D.value,
-      39077562: t.overlayColor,
-      e596205c: B.value,
-      "639852b9": T.value,
-      "21a8e911": $.value,
-      "23ec3bbe": V.value
+      "7903f424": D.value,
+      "73d113b6": t.overlayColor,
+      "35c74328": B.value,
+      "21eea1ba": T.value,
+      "240c1632": $.value,
+      "3c86aab0": V.value
     }));
-    const c = a(!1), u = a(0), l = a(100), f = a(!1), y = a(0), g = a(null), S = a(null), d = a(null), w = a(null), k = a(null), C = a(null), E = (e) => document.activeElement === e;
+    const u = a(!1), m = a(0), l = a(100), f = a(!1), y = a(0), g = a(null), S = a(null), c = a(null), w = a(null), k = a(null), C = a(null), E = (e) => document.activeElement === e;
     window.addEventListener("keyup", (e) => {
       if (!g.value)
         return;
       const o = g.value.contains(e.target) && E(e.target);
       e.key === "Escape" && !o && v();
     });
-    const I = m(() => [
+    const I = h(() => [
       "bottom-sheet__content",
       {
-        "bottom-sheet__content--fullscreen": u.value >= window.innerHeight,
+        "bottom-sheet__content--fullscreen": m.value >= window.innerHeight,
         "bottom-sheet__content--dragging": f.value
       }
-    ]), D = m(() => `${t.transitionDuration}s`), T = m(() => u.value && u.value > 0 ? `${u.value + 1}px` : "auto"), V = m(() => t.maxHeight ? `${t.maxHeight}px` : "inherit"), B = m(() => `${l.value}%`), $ = m(() => `${t.maxWidth}px`), Y = async () => {
-      await x(), u.value = S.value.offsetHeight + d.value.clientHeight + w.value.offsetHeight;
+    ]), D = h(() => `${t.transitionDuration}s`), T = h(() => "auto"), V = h(() => t.maxHeight ? `${t.maxHeight}px` : "inherit"), B = h(() => `${l.value}%`), $ = h(() => `${t.maxWidth}px`), Y = async () => {
+      await x(), m.value = S.value.offsetHeight + c.value.clientHeight + w.value.offsetHeight;
     }, H = (e, o) => {
       if (t.canSwipe) {
         f.value = !0;
-        const h = (L) => {
+        const d = (L) => {
           L.preventDefault();
         };
-        e.deltaY > 0 && (o === "main" && e.type === "panup" && (l.value = _(e.deltaY), e.cancelable && d.value.addEventListener("touchmove", h)), o === "main" && e.type === "pandown" && y.value === 0 && (l.value = _(e.deltaY)), o === "area" && (l.value = _(e.deltaY)), e.type === "panup" && i("dragging-up"), e.type === "pandown" && i("dragging-down")), e.isFinal && (d.value.removeEventListener("touchmove", h), o === "main" && (y.value = d.value.scrollTop), f.value = !1, l.value >= 10 ? v() : l.value = 0);
+        e.deltaY > 0 && (o === "main" && e.type === "panup" && (l.value = _(e.deltaY), e.cancelable && c.value.addEventListener("touchmove", d)), o === "main" && e.type === "pandown" && y.value === 0 && (l.value = _(e.deltaY)), o === "area" && (l.value = _(e.deltaY)), e.type === "panup" && i("dragging-up"), e.type === "pandown" && i("dragging-down")), e.isFinal && (c.value.removeEventListener("touchmove", d), o === "main" && (y.value = c.value.scrollTop), f.value = !1, l.value >= 10 ? v() : l.value = 0);
       }
     };
     x(() => {
@@ -53,26 +53,26 @@ const U = (n) => (K("data-v-d1bf6e19"), n = n(), Q(), n), X = ["aria-hidden"], Z
       const e = new s(C.value, {
         inputClass: s.TouchMouseInput,
         recognizers: [[s.Pan, { direction: s.DIRECTION_VERTICAL }]]
-      }), o = new s(d.value, {
+      }), o = new s(c.value, {
         inputClass: s.TouchMouseInput,
         recognizers: [[s.Pan, { direction: s.DIRECTION_VERTICAL }]]
       });
-      e.on("panstart panup pandown panend", (h) => {
-        H(h, "area");
-      }), o.on("panstart panup pandown panend", (h) => {
-        H(h, "main");
+      e.on("panstart panup pandown panend", (d) => {
+        H(d, "area");
+      }), o.on("panstart panup pandown panend", (d) => {
+        H(d, "main");
       });
     });
     const A = () => {
-      l.value = 0, document.documentElement.style.overflowY = "hidden", document.documentElement.style.overscrollBehavior = "none", c.value = !0, i("opened");
+      l.value = 0, document.documentElement.style.overflowY = "hidden", document.documentElement.style.overscrollBehavior = "none", u.value = !0, i("opened");
     }, v = async () => {
-      c.value = !1, l.value = 100, setTimeout(() => {
+      u.value = !1, l.value = 100, setTimeout(() => {
         document.documentElement.style.overflowY = "auto", document.documentElement.style.overscrollBehavior = "", i("closed");
       }, t.transitionDuration * 1e3);
     }, F = () => {
       t.overlayClickClose && v();
     }, _ = (e) => {
-      const o = t.maxHeight && t.maxHeight <= u.value ? t.maxHeight : u.value;
+      const o = t.maxHeight && t.maxHeight <= m.value ? t.maxHeight : m.value;
       return e / o * 100;
     };
     return p({ open: A, close: v }), (e, o) => (N(), R(z, { to: "body" }, [
@@ -80,7 +80,7 @@ const U = (n) => (K("data-v-d1bf6e19"), n = n(), Q(), n), X = ["aria-hidden"], Z
         class: "bottom-sheet",
         ref_key: "bottomSheet",
         ref: g,
-        "aria-hidden": !c.value,
+        "aria-hidden": !u.value,
         role: "dialog"
       }, [
         W(P, null, {
@@ -89,7 +89,7 @@ const U = (n) => (K("data-v-d1bf6e19"), n = n(), Q(), n), X = ["aria-hidden"], Z
               onClick: F,
               class: "bottom-sheet__overlay"
             }, null, 512), [
-              [G, e.overlay && c.value]
+              [G, e.overlay && u.value]
             ])
           ]),
           _: 1
@@ -113,7 +113,7 @@ const U = (n) => (K("data-v-d1bf6e19"), n = n(), Q(), n), X = ["aria-hidden"], Z
           ], 512),
           r("main", {
             ref_key: "bottomSheetMain",
-            ref: d,
+            ref: c,
             class: "bottom-sheet__main"
           }, [
             b(e.$slots, "default", {}, void 0, !0)
@@ -132,10 +132,10 @@ const U = (n) => (K("data-v-d1bf6e19"), n = n(), Q(), n), X = ["aria-hidden"], Z
 });
 const oe = (n, p) => {
   const i = n.__vccOpts || n;
-  for (const [t, c] of p)
-    i[t] = c;
+  for (const [t, u] of p)
+    i[t] = u;
   return i;
-}, le = /* @__PURE__ */ oe(te, [["__scopeId", "data-v-d1bf6e19"]]);
+}, le = /* @__PURE__ */ oe(te, [["__scopeId", "data-v-0a0eb29a"]]);
 export {
   le as default
 };

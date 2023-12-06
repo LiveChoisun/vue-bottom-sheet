@@ -145,7 +145,8 @@ const transitionDurationString = computed(() => {
  * Return sheet height string with px
  */
 const sheetHeightString = computed(() => {
-  return sheetHeight.value && sheetHeight.value > 0 ? `${sheetHeight.value + 1}px` : 'auto'
+  //return sheetHeight.value && sheetHeight.value > 0 ? `${sheetHeight.value + 1}px` : 'auto'
+  return 'auto'
 })
 
 /**
