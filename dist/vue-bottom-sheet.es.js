@@ -1,6 +1,6 @@
 import { defineComponent as M, useCssVars as O, ref as a, computed as h, nextTick as x, openBlock as N, createBlock as R, Teleport as z, createElementVNode as r, createVNode as W, Transition as P, withCtx as j, withDirectives as q, vShow as G, normalizeClass as J, renderSlot as b, pushScopeId as K, popScopeId as Q } from "vue";
 import s from "hammerjs";
-const U = (n) => (K("data-v-0a0eb29a"), n = n(), Q(), n), X = ["aria-hidden"], Z = /* @__PURE__ */ U(() => /* @__PURE__ */ r("div", { class: "bottom-sheet__draggable-thumb" }, null, -1)), ee = [
+const U = (n) => (K("data-v-43ee0a37"), n = n(), Q(), n), X = ["aria-hidden"], Z = /* @__PURE__ */ U(() => /* @__PURE__ */ r("div", { class: "bottom-sheet__draggable-thumb" }, null, -1)), ee = [
   Z
 ], te = /* @__PURE__ */ M({
   __name: "VueBottomSheet",
@@ -17,12 +17,12 @@ const U = (n) => (K("data-v-0a0eb29a"), n = n(), Q(), n), X = ["aria-hidden"], Z
   setup(n, { expose: p, emit: i }) {
     const t = n;
     O((e) => ({
-      "7903f424": D.value,
-      "73d113b6": t.overlayColor,
-      "35c74328": B.value,
-      "21eea1ba": T.value,
-      "240c1632": $.value,
-      "3c86aab0": V.value
+      "08349fa4": D.value,
+      "1759105b": t.overlayColor,
+      "3d0b27de": B.value,
+      "12aff62d": T.value,
+      "1c5d1a1d": $.value,
+      "7fbe2c32": V.value
     }));
     const u = a(!1), m = a(0), l = a(100), f = a(!1), y = a(0), g = a(null), S = a(null), c = a(null), w = a(null), k = a(null), C = a(null), E = (e) => document.activeElement === e;
     window.addEventListener("keyup", (e) => {
@@ -67,7 +67,7 @@ const U = (n) => (K("data-v-0a0eb29a"), n = n(), Q(), n), X = ["aria-hidden"], Z
       l.value = 0, document.documentElement.style.overflowY = "hidden", document.documentElement.style.overscrollBehavior = "none", u.value = !0, i("opened");
     }, v = async () => {
       u.value = !1, l.value = 100, setTimeout(() => {
-        document.documentElement.style.overflowY = "auto", document.documentElement.style.overscrollBehavior = "", i("closed");
+        document.documentElement.style.overflowY = "visible", document.documentElement.style.overscrollBehavior = "", i("closed");
       }, t.transitionDuration * 1e3);
     }, F = () => {
       t.overlayClickClose && v();
@@ -135,7 +135,7 @@ const oe = (n, p) => {
   for (const [t, u] of p)
     i[t] = u;
   return i;
-}, le = /* @__PURE__ */ oe(te, [["__scopeId", "data-v-0a0eb29a"]]);
+}, le = /* @__PURE__ */ oe(te, [["__scopeId", "data-v-43ee0a37"]]);
 export {
   le as default
 };
