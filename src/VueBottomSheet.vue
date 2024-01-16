@@ -284,7 +284,7 @@ const close = async () => {
   showSheet.value = false
   translateValue.value = 100
   setTimeout(() => {
-    document.documentElement.style.overflowY = 'auto'
+    document.documentElement.style.overflowY = 'visible'
     document.documentElement.style.overscrollBehavior = ''
     emit('closed')
   }, props.transitionDuration * 1000)
