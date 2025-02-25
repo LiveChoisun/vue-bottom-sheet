@@ -1,6 +1,6 @@
 import { defineComponent as M, useCssVars as O, ref as a, computed as m, nextTick as E, openBlock as R, createBlock as z, Teleport as W, createElementVNode as r, createVNode as P, Transition as j, withCtx as q, withDirectives as G, vShow as J, normalizeClass as b, renderSlot as y, pushScopeId as K, popScopeId as Q } from "vue";
 import l from "hammerjs";
-const U = (n) => (K("data-v-a0231cb9"), n = n(), Q(), n), X = ["aria-hidden"], Z = /* @__PURE__ */ U(() => /* @__PURE__ */ r("div", { class: "bottom-sheet__draggable-thumb" }, null, -1)), ee = [
+const U = (n) => (K("data-v-12a7d6be"), n = n(), Q(), n), X = ["aria-hidden"], Z = /* @__PURE__ */ U(() => /* @__PURE__ */ r("div", { class: "bottom-sheet__draggable-thumb" }, null, -1)), ee = [
   Z
 ], te = /* @__PURE__ */ M({
   __name: "VueBottomSheet",
@@ -19,12 +19,12 @@ const U = (n) => (K("data-v-a0231cb9"), n = n(), Q(), n), X = ["aria-hidden"], Z
   setup(n, { expose: f, emit: i }) {
     const t = n;
     O((e) => ({
-      "48aeb4c9": T.value,
-      "2481b580": t.overlayColor,
-      "123f9783": N.value,
-      "747130a8": V.value,
-      "62192cfc": $.value,
-      "1ff1c96d": B.value
+      "4d1921dc": T.value,
+      "0d0cc6da": t.overlayColor,
+      19398616: N.value,
+      "1e9dfa16": V.value,
+      "4d46fb56": $.value,
+      "62abcafa": B.value
     }));
     const u = a(!1), h = a(0), s = a(100), p = a(!1), S = a(0), g = a(null), C = a(null), c = a(null), w = a(null), I = a(null), H = a(null), x = (e) => document.activeElement === e;
     window.addEventListener("keyup", (e) => {
@@ -104,7 +104,7 @@ const U = (n) => (K("data-v-a0231cb9"), n = n(), Q(), n), X = ["aria-hidden"], Z
           r("header", {
             ref_key: "bottomSheetHeader",
             ref: C,
-            class: b(e.headerClassName ? `bottom-sheet__header ${e.headerClassName}` : "bottom-sheet__header")
+            class: b(e.headerClassName !== "" ? `bottom-sheet__header ${e.headerClassName}` : "bottom-sheet__header")
           }, [
             r("div", {
               class: "bottom-sheet__draggable-area",
@@ -116,7 +116,7 @@ const U = (n) => (K("data-v-a0231cb9"), n = n(), Q(), n), X = ["aria-hidden"], Z
           r("main", {
             ref_key: "bottomSheetMain",
             ref: c,
-            class: b(e.mainClassName ? `bottom-sheet__main ${e.mainClassName}` : "bottom-sheet__main")
+            class: b(e.mainClassName !== "" ? `bottom-sheet__main ${e.mainClassName}` : "bottom-sheet__main")
           }, [
             y(e.$slots, "default", {}, void 0, !0)
           ], 2),
@@ -137,7 +137,7 @@ const oe = (n, f) => {
   for (const [t, u] of f)
     i[t] = u;
   return i;
-}, se = /* @__PURE__ */ oe(te, [["__scopeId", "data-v-a0231cb9"]]);
+}, se = /* @__PURE__ */ oe(te, [["__scopeId", "data-v-12a7d6be"]]);
 export {
   se as default
 };
