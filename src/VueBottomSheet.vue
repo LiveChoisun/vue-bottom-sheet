@@ -9,7 +9,7 @@
         />
       </transition>
       <div ref="bottomSheetContent" :class="sheetContentClasses">
-        <header ref="bottomSheetHeader" class="bottom-sheet__header">
+        <header ref="bottomSheetHeader" :class="mainClassNames ? `bottom-sheet__header ${mainClassNames}` : 'bottom-sheet__header'">
           <div class="bottom-sheet__draggable-area" ref="bottomSheetDraggableArea">
             <div class="bottom-sheet__draggable-thumb"></div>
           </div>
@@ -41,6 +41,7 @@ interface IProps {
   transitionDuration?: number
   overlayClickClose?: boolean
   canSwipe?: boolean
+  mainClassNames?: string
 }
 
 /**
