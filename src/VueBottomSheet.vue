@@ -63,7 +63,8 @@ const props = withDefaults(defineProps<IProps>(), {
   maxWidth: 640,
   transitionDuration: 0.5,
   overlayClickClose: true,
-  canSwipe: true
+  canSwipe: true,
+  mainClassNames: ''
 })
 
 /**
