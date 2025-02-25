@@ -9,13 +9,13 @@
         />
       </transition>
       <div ref="bottomSheetContent" :class="sheetContentClasses">
-        <header ref="bottomSheetHeader" :class="mainClassNames ? `bottom-sheet__header ${mainClassNames}` : 'bottom-sheet__header'">
+        <header ref="bottomSheetHeader" :class="headerClassName ? `bottom-sheet__header ${headerClassName}` : 'bottom-sheet__header'">
           <div class="bottom-sheet__draggable-area" ref="bottomSheetDraggableArea">
             <div class="bottom-sheet__draggable-thumb"></div>
           </div>
           <slot name="header" />
         </header>
-        <main ref="bottomSheetMain" class="bottom-sheet__main">
+        <main ref="bottomSheetMain" :class="mainClassName ? `bottom-sheet__main ${mainClassName}` : 'bottom-sheet__main'">
           <slot />
         </main>
         <footer ref="bottomSheetFooter" class="bottom-sheet__footer">
@@ -41,7 +41,8 @@ interface IProps {
   transitionDuration?: number
   overlayClickClose?: boolean
   canSwipe?: boolean
-  mainClassNames?: string
+  mainClassName?: string
+  headerClassName?: string
 }
 
 /**
@@ -64,7 +65,8 @@ const props = withDefaults(defineProps<IProps>(), {
   transitionDuration: 0.5,
   overlayClickClose: true,
   canSwipe: true,
-  mainClassNames: ''
+  mainClassName: '',
+  headerClassName: ''
 })
 
 /**
