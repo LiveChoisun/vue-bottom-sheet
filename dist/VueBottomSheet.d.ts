@@ -26,6 +26,10 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         type: import("vue").PropType<boolean>;
         default: boolean;
     };
+    mainClassNames: {
+        type: import("vue").PropType<string>;
+        default: string;
+    };
 }, {
     open: () => void;
     close: () => Promise<void>;
@@ -57,6 +61,10 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         type: import("vue").PropType<boolean>;
         default: boolean;
     };
+    mainClassNames: {
+        type: import("vue").PropType<string>;
+        default: string;
+    };
 }>> & {
     onOpened?: ((...args: any[]) => any) | undefined;
     onClosed?: ((...args: any[]) => any) | undefined;
@@ -69,6 +77,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     transitionDuration: number;
     overlayClickClose: boolean;
     canSwipe: boolean;
+    mainClassNames: string;
 }, {}>, {
     header?(_: {}): any;
     default?(_: {}): any;
