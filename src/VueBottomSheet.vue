@@ -9,13 +9,13 @@
         />
       </transition>
       <div ref="bottomSheetContent" :class="sheetContentClasses">
-        <header ref="bottomSheetHeader" :class="headerClassName !== '' ? `bottom-sheet__header ${headerClassName}` : 'bottom-sheet__header'">
+        <header ref="bottomSheetHeader" :class="`bottom-sheet__header ${headerClassName}`">
           <div class="bottom-sheet__draggable-area" ref="bottomSheetDraggableArea">
             <div class="bottom-sheet__draggable-thumb"></div>
           </div>
           <slot name="header" />
         </header>
-        <main ref="bottomSheetMain" :class="mainClassName !== '' ? `bottom-sheet__main ${mainClassName}` : 'bottom-sheet__main'">
+        <main ref="bottomSheetMain" :class="`bottom-sheet__main ${mainClassName}`">
           <slot />
         </main>
         <footer ref="bottomSheetFooter" class="bottom-sheet__footer">
